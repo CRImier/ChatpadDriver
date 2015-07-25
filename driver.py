@@ -2,6 +2,8 @@
 # Python Xbox chatpad driver by CRImier
 # Special thanks to Cliff L. Biffle - cliffle.org - for describing the protocol.
 # Written using Arduino library - https://github.com/vitormhenrique/xbox_chatpad_library/ - as a reference
+# TODO: Add modifier keys
+# TODO: Add Chatpad detection on a serial port (using 5-byte init response messages starting with A5)
 ###################################
 
 
