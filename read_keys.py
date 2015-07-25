@@ -64,7 +64,7 @@ def exit():
     sys.exit(0)    
 
 #Now is the actual key listening
-chatpad = Chatpad(port="/dev/ttyUSB1", callback=callback)
+chatpad = Chatpad(port="/dev/ttyUSB1", callback=callback, name=None) #Not enabling evdev input by passing 'name' as None
 print "Starting listening."
 print "If you accidentally press more than one key or an unneeded key and don't need to register it, just send an empty response."
 try:
