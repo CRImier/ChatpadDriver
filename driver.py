@@ -64,7 +64,7 @@ class Chatpad():
         self.send_init_message()
         self.send_awake_message()
         counter = 0
-        counter_treshold = 10
+        counter_treshold = 100
         pressed_keys = []
         previous_keys = []
         pressed_modifiers = []
