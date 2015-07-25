@@ -68,6 +68,6 @@ chatpad = Chatpad(port="/dev/ttyUSB1", callback=callback)
 print "Starting listening."
 print "If you accidentally press more than one key or an unneeded key and don't need to register it, just send an empty response."
 try:
-    chatpad.thread_listen()
+    chatpad.listen()
 except KeyboardInterrupt:
     exit()

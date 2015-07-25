@@ -2,7 +2,6 @@
 # Python Xbox chatpad driver by CRImier
 # Special thanks to Cliff L. Biffle - cliffle.org - for describing the protocol.
 # Written using Arduino library - https://github.com/vitormhenrique/xbox_chatpad_library/ - as a reference
-# TODO: Add modifier keys
 ###################################
 
 
@@ -54,7 +53,7 @@ class Chatpad():
             self.uinput.write(ecodes.EV_KEY, ecodes.ecodes[self.key_dict[key]], 0)
         self.uinput.syn()
 
-    def thread_listen(self):
+    def listen(self):
         self.send_init_message()
         self.send_awake_message()
         counter = 0
@@ -111,3 +110,4 @@ class Chatpad():
 
 if __name__ == "__main__":
     chatpad = Chatpad(port="/dev/ttyUSB1")
+    chatpad.listen()
