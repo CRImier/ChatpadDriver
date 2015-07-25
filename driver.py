@@ -3,7 +3,6 @@
 # Special thanks to Cliff L. Biffle - cliffle.org - for describing the protocol.
 # Written using Arduino library - https://github.com/vitormhenrique/xbox_chatpad_library/ - as a reference
 # TODO: Add modifier keys
-# TODO: Add Chatpad detection on a serial port (using 5-byte init response messages starting with A5)
 ###################################
 
 
@@ -41,6 +40,10 @@ class Chatpad():
     def send_awake_message(self):
         #print "Awake message sent"
         self.serial.write(self.kAwakeMessage)
+
+    def test_chatpad_on_serial(self):
+        # TODO: Add Chatpad detection on a serial port (using 5-byte init response messages starting with A5)
+        return NotImplementedError
 
     def thread_listen(self):
         self.send_init_message()
